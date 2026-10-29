@@ -1,0 +1,37 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #182534;
+  background: #f3f5f7;
+  line-height: 1.6;
+}
+
+body { margin: 0; padding: 2rem 1rem; }
+main { max-width: 42rem; margin: 0 auto; }
+h1, h2 { line-height: 1.2; }
+form, #order-summary {
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  background: white;
+  border: 1px solid #c8d1da;
+  border-radius: 0.5rem;
+}
+.field, fieldset { margin: 0 0 1.25rem; }
+.field > label, legend { font-weight: 600; }
+.field > label { display: block; margin-bottom: 0.4rem; }
+input, button { font: inherit; }
+input[type="file"] { max-width: 100%; }
+input[type="number"] { width: 6rem; padding: 0.4rem; }
+fieldset { border: 1px solid #c8d1da; padding: 0.75rem 1rem; }
+.choice { display: block; padding: 0.25rem 0; }
+button {
+  background: #164e85;
+  color: white;
+  border: 0;
+  border-radius: 0.3rem;
+  padding: 0.65rem 1.25rem;
+  cursor: pointer;
+}
+button:hover { background: #103b65; }
+:focus-visible { outline: 3px solid #a44b00; outline-offset: 3px; }
+dt { font-weight: 600; }
+dd { margin: 0 0 0.75rem; overflow-wrap: anywhere; }

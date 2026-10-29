@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Secure Pages</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/printing.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Secure Pages</h1>
+      <p>Milestone 1: this page is served by Node.js and Express.</p>
+      <h2>Student printing</h2>
+      <p id="file-help">Select a PDF and choose your print options. Reviewing keeps your file on this device; it does not upload or save it.</p>
+
+      <form id="printing-form">
+        <div class="field">
+          <label for="pdf">PDF file</label>
+          <input id="pdf" name="pdf" type="file" accept=".pdf,application/pdf" aria-describedby="file-help" required>
+        </div>
+
+        <div class="field">
+          <label for="copies">Copies</label>
+          <input id="copies" name="copies" type="number" min="1" step="1" value="1" required>
+        </div>
+
+        <fieldset>
+          <legend>Print color</legend>
+          <label class="choice"><input type="radio" name="color" value="Black and white" checked> Black and white</label>
+          <label class="choice"><input type="radio" name="color" value="Color"> Color</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Printed sides</legend>
+          <label class="choice"><input type="radio" name="sides" value="Single sided" checked> Single sided</label>
+          <label class="choice"><input type="radio" name="sides" value="Double sided"> Double sided</label>
+        </fieldset>
+
+        <button type="submit">Review order</button>
+      </form>
+
+      <section id="order-summary" aria-labelledby="summary-heading" hidden>
+        <h2 id="summary-heading" tabindex="-1">Order summary</h2>
+        <dl>
+          <dt>PDF file</dt><dd id="summary-file"></dd>
+          <dt>Copies</dt><dd id="summary-copies"></dd>
+          <dt>Print color</dt><dd id="summary-color"></dd>
+          <dt>Printed sides</dt><dd id="summary-sides"></dd>
+        </dl>
+        <p>Review only. Your file has not been uploaded or stored.</p>
+      </section>
+    </main>
+  </body>
+</html>
